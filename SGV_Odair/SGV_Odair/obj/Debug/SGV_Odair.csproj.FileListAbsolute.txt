@@ -1,0 +1,15 @@
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\bin\Debug\SGV_Odair.exe.config
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\bin\Debug\SGV_Odair.exe
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\bin\Debug\SGV_Odair.pdb
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.Principal.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.Properties.Resources.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.csproj.GenerateResource.Cache
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.exe
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.pdb
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.caminhoDados.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.consFornecedor.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.catProdudos.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.fornecedor.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.produto.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.consProduto.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.csprojResolveAssemblyReference.cache
