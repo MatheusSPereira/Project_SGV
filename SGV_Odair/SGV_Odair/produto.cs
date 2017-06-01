@@ -25,6 +25,9 @@ namespace SGV_Odair
 
     public partial class produto : Form
     {
+        //caminhgo para fullpath dos arquivos *txt
+        configuracao caminho = new configuracao();
+
         int totallinha = 0;//variavel global
         //numero total de linhas no arquivo texto
         //vetro da minha struct 
@@ -33,61 +36,12 @@ namespace SGV_Odair
         //marcar posição de um registro da struct 
 
         int modo;
-        configuracao caminho = new configuracao();
+        
         public produto()
         {
             InitializeComponent();
 
-            try
-            {
-                //CATEGORIA ARQUIVO TXT
-                //Inicializa o construtor StreamReader com o nome do arquivo e define que //utilizará acentuação
-                StreamReader srCat = new StreamReader(caminho.fullPath + "categoria.txt", Encoding.UTF8);
-                
-                //Lê a primeira linha do arquivo
-                string linhaCat = srCat.ReadLine();
-
-                //Continua lendo até o final do arquivo
-                while (linhaCat != null)
-                {
-                    //Adiciona o linha lida no ListBox
-                    cbxCat.Items.Add(linhaCat);
-
-                    //Lê a próxima linha
-                    linhaCat = srCat.ReadLine();
-                }
-                //Fecha o arquivo texto
-                srCat.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Falha ao tentar abrir o arquivo!", "Aviso");
-            }
-
-            try
-            {
-                //RAZAO SOCIAL ARQUIVO TXT
-                //Inicializa o construtor StreamReader com o nome do arquivo e define que //utilizará acentuação
-                StreamReader srRazSoc = new StreamReader(caminho.fullPath + "razaoSocial.txt", Encoding.UTF8);
-
-                //Lê a primeira linha do arquivo
-                string linhaRazSoc = srRazSoc.ReadLine();
-
-                //Continua lendo até o final do arquivo
-                while (linhaRazSoc != null)
-                {
-                    //Adiciona o linha lida no ListBox
-                    cbxRazSoc.Items.Add(linhaRazSoc);
-                    //Lê a próxima linha
-                    linhaRazSoc = srRazSoc.ReadLine();
-                }
-                //Fecha o arquivo texto
-                srRazSoc.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Falha ao tentar abrir o arquivo!", "Aviso");
-            }
+            carregaCombos();
         }
 
         //========== INICIO ============ BOTÕES E FORM LOAD IMPLEMENTADOS ========== INICIO ============ 
@@ -221,7 +175,7 @@ namespace SGV_Odair
             StreamWriter graProd1 = new StreamWriter(caminho.fullPath + "produto.txt", true, Encoding.UTF8);
             graProd1.WriteLine(txtCod.Text + ";" + txtDescProdt.Text + ";" + cbxCat.Text + ";" + cbxRazSoc.Text + ";" + txtQtdEstoque.Text + ";" + txtEstoMin.Text + ";" + txtvalUnit.Text);
 
-            StreamWriter graProd2 = new StreamWriter(caminho.fullPath + "descProdut.txt", true, Encoding.UTF8);
+            StreamWriter graProd2 = new StreamWriter(caminho.fullPath + "descProduto.txt", true, Encoding.UTF8);
             graProd2.WriteLine(txtDescProdt.Text);
 
             graProd1.Close();
@@ -388,6 +342,59 @@ namespace SGV_Odair
             graProd.Close();
         }
 
+        void carregaCombos()
+        {
+            try
+            {
+                //CATEGORIA ARQUIVO TXT
+                //Inicializa o construtor StreamReader com o nome do arquivo e define que //utilizará acentuação
+                StreamReader srCat = new StreamReader(caminho.fullPath + "categoria.txt", Encoding.UTF8);
+
+                //Lê a primeira linha do arquivo
+                string linhaCat = srCat.ReadLine();
+
+                //Continua lendo até o final do arquivo
+                while (linhaCat != null)
+                {
+                    //Adiciona o linha lida no ListBox
+                    cbxCat.Items.Add(linhaCat);
+
+                    //Lê a próxima linha
+                    linhaCat = srCat.ReadLine();
+                }
+                //Fecha o arquivo texto
+                srCat.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Falha ao tentar abrir o arquivo!", "Aviso");
+            }
+
+            try
+            {
+                //RAZAO SOCIAL ARQUIVO TXT
+                //Inicializa o construtor StreamReader com o nome do arquivo e define que //utilizará acentuação
+                StreamReader srRazSoc = new StreamReader(caminho.fullPath + "razaoSocial.txt", Encoding.UTF8);
+
+                //Lê a primeira linha do arquivo
+                string linhaRazSoc = srRazSoc.ReadLine();
+
+                //Continua lendo até o final do arquivo
+                while (linhaRazSoc != null)
+                {
+                    //Adiciona o linha lida no ListBox
+                    cbxRazSoc.Items.Add(linhaRazSoc);
+                    //Lê a próxima linha
+                    linhaRazSoc = srRazSoc.ReadLine();
+                }
+                //Fecha o arquivo texto
+                srRazSoc.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Falha ao tentar abrir o arquivo!", "Aviso");
+            }
+        }
 
     }//fim do public partial class produto : Form
 }

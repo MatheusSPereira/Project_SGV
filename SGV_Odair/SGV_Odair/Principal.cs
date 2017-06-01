@@ -45,5 +45,11 @@ namespace SGV_Odair
             consProduto frmconsProduto = new consProduto();
             frmconsProduto.Show();
         }
+
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pedido frmPedido = new pedido();
+            frmPedido.Show();
+        }
     }
 }

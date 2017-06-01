@@ -12,4 +12,6 @@ C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj
 C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.fornecedor.resources
 C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.produto.resources
 C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.consProduto.resources
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.pedido.resources
 C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.csprojResolveAssemblyReference.cache
+C:\Users\Matheus Pereira\Desktop\PROJETO ODAIR\SGV_Odair\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.consPedido.resources

@@ -69,8 +69,7 @@ namespace SGV_Odair
             // esse dado sera utilizado posteriormente
             //para inicializar o vetor regaluno
             contarlinhas();
-            /* teste 
-            MessageBox.Show(totallinha.ToString());*/
+
             //defini o tamanho do vetor atraves da função acima 
             cadForn = new CadForne[totallinha];
             //carregar o vetor Cadastro

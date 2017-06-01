@@ -58,6 +58,12 @@
     <Compile Include="catProdudos.Designer.cs">
       <DependentUpon>catProdudos.cs</DependentUpon>
     </Compile>
+    <Compile Include="consPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consPedido.Designer.cs">
+      <DependentUpon>consPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="consProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consFornecedor.resx">
       <DependentUpon>consFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consPedido.resx">
+      <DependentUpon>consPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consProduto.resx">
       <DependentUpon>consProduto.cs</DependentUpon>

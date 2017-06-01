@@ -34,13 +34,14 @@
             // 
             // gridConsProduto
             // 
+            this.gridConsProduto.AllowUserToAddRows = false;
+            this.gridConsProduto.AllowUserToDeleteRows = false;
             this.gridConsProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridConsProduto.Location = new System.Drawing.Point(12, 44);
             this.gridConsProduto.Name = "gridConsProduto";
             this.gridConsProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridConsProduto.Size = new System.Drawing.Size(536, 224);
             this.gridConsProduto.TabIndex = 0;
-            this.gridConsProduto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridConsProduto_CellFormatting);
             // 
             // consProduto
             // 

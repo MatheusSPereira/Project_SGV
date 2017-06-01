@@ -14,7 +14,7 @@ namespace SGV_Odair
     public partial class consProduto : Form
     {
         configuracao caminho = new configuracao();
-        
+
 
         public consProduto()
         {
@@ -24,6 +24,7 @@ namespace SGV_Odair
         private void consProduto_Load(object sender, EventArgs e)
         {
             MostraDados();
+            
         }
 
 
@@ -66,25 +67,29 @@ namespace SGV_Odair
 
                 //object qtdEstoq = gridConsProduto.Rows[Convert.ToInt32(campos[4])].Cells["Qtd Estoque"];
                 //object estoqMin = gridConsProduto.Rows[Convert.ToInt32(campos[5])].Cells["Estoque Minimo"];
-               
+                RowsColor();
 
-                if (Convert.ToInt32(campos[4]) < Convert.ToInt32(campos[5]))
-                {
-                    MessageBox.Show("Dados estoque: " + campos[4] + " Dados estoque minimo: " + campos[5]);
-
-                    //gridConsProduto.Rows(rows.campos[4]] = Red; //campos[4]
-                    gridConsProduto.Rows[Convert.ToInt32(Linha)].Cells[Convert.ToInt32("Qtd Estoque")].Style.BackColor = Color.Red;
-                }
 
             }
 
 
         }
 
-        private void gridConsProduto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+         public void RowsColor()
         {
 
+            for (int i = 0; i < gridConsProduto.Rows.Count; i++)
+            {
+                int qtdEstoque = int.Parse(gridConsProduto.Rows[i].Cells[4].Value.ToString());
+                int estoqMin = int.Parse(gridConsProduto.Rows[i].Cells[5].Value.ToString());
 
+
+                if (qtdEstoque < estoqMin)
+                {
+                    gridConsProduto.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
         }
+
     }
 }
