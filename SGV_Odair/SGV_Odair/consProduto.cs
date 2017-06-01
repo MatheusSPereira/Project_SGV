@@ -65,8 +65,7 @@ namespace SGV_Odair
                 string[] campos = Linha[i].Split(Convert.ToChar(";"));
                 rows.Add(campos[0], campos[1], campos[2], campos[3], campos[4], campos[5], campos[6]);
 
-                //object qtdEstoq = gridConsProduto.Rows[Convert.ToInt32(campos[4])].Cells["Qtd Estoque"];
-                //object estoqMin = gridConsProduto.Rows[Convert.ToInt32(campos[5])].Cells["Estoque Minimo"];
+                
                 RowsColor();
 
 

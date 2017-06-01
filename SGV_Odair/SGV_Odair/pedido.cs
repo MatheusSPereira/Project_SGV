@@ -41,9 +41,6 @@ namespace SGV_Odair
             carregaCombos();
         }
 
-
-
-
         //========== INICIO ============ BOTÕES E FORM LOAD IMPLEMENTADOS ========== INICIO ============ 
         private void pedido_Load(object sender, EventArgs e)
         {
@@ -52,9 +49,6 @@ namespace SGV_Odair
             // esse dado sera utilizado posteriormente
             //para inicializar o vetor regaluno
             contarlinhas();
-
-            //teste
-            // MessageBox.Show(totallinha.ToString());
             //defini o tamanho do vetor atraves da função acima 
             cadPed = new cadPedido[totallinha];
             //carregar o vetor Cadastro
@@ -113,8 +107,6 @@ namespace SGV_Odair
 
             txtCodPed.Clear();
             txtDataPed.Clear();
-            cbxDescProdut.ResetText();
-            cbxTipMov.ResetText();
             txtQtdMov.Clear();
 
             txtCodPed.Focus();
@@ -256,7 +248,7 @@ namespace SGV_Odair
             cbxTipMov.Enabled = (false);
             txtQtdMov.Enabled = (false);
 
-            this.Text = "Registro de Fornecedor";
+            this.Text = this.Text + "Registro de Fornecedor";
         }
 
         void ModoEdicao()
@@ -276,7 +268,7 @@ namespace SGV_Odair
             cbxTipMov.Enabled = (true);
             txtQtdMov.Enabled = (true);
 
-            this.Text = this.Text + " - ALTERAÇÃO DO FORNECEDOR";
+            this.Text = this.Text + " - ALTERAÇÃO DO Pedido";
         }
 
         void carregarPedido()

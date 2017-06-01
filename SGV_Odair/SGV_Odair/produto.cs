@@ -52,8 +52,6 @@ namespace SGV_Odair
             // esse dado sera utilizado posteriormente
             //para inicializar o vetor regaluno
             contarlinhas();
-            /* teste 
-            MessageBox.Show(totallinha.ToString());*/
             //defini o tamanho do vetor atraves da função acima 
             cadProd = new cadProduto[totallinha];
             //carregar o vetor Cadastro
@@ -264,6 +262,7 @@ namespace SGV_Odair
             txtvalUnit.Enabled = (false);
             cbxCat.Enabled = (false);
             cbxRazSoc.Enabled = (false);
+
             this.Text = "Registro de Fornecedor";
         }
 
@@ -285,6 +284,7 @@ namespace SGV_Odair
             txtvalUnit.Enabled = (true);
             cbxCat.Enabled = (true);
             cbxRazSoc.Enabled = (true);
+
             this.Text = this.Text + " - ALTERAÇÃO DO FORNECEDOR";
         }
 

@@ -38,6 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtQtdMov = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDataPed = new System.Windows.Forms.TextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.btnAnt = new System.Windows.Forms.Button();
             this.btnProx = new System.Windows.Forms.Button();
             this.btnUlt = new System.Windows.Forms.Button();
-            this.txtDataPed = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,6 +153,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da Movimentação";
             // 
+            // txtDataPed
+            // 
+            this.txtDataPed.Location = new System.Drawing.Point(189, 63);
+            this.txtDataPed.Name = "txtDataPed";
+            this.txtDataPed.Size = new System.Drawing.Size(100, 20);
+            this.txtDataPed.TabIndex = 22;
+            // 
             // btnConsultar
             // 
             this.btnConsultar.Location = new System.Drawing.Point(242, 13);
@@ -250,18 +257,11 @@
             this.btnUlt.UseVisualStyleBackColor = true;
             this.btnUlt.Click += new System.EventHandler(this.btnUlt_Click);
             // 
-            // txtDataPed
-            // 
-            this.txtDataPed.Location = new System.Drawing.Point(189, 63);
-            this.txtDataPed.Name = "txtDataPed";
-            this.txtDataPed.Size = new System.Drawing.Size(100, 20);
-            this.txtDataPed.TabIndex = 22;
-            // 
             // pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 316);
+            this.ClientSize = new System.Drawing.Size(349, 300);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUlt);
             this.Controls.Add(this.btnProx);

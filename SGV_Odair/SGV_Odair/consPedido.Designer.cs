@@ -34,6 +34,8 @@
             // 
             // gridConsPedido
             // 
+            this.gridConsPedido.AllowUserToAddRows = false;
+            this.gridConsPedido.AllowUserToDeleteRows = false;
             this.gridConsPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridConsPedido.Location = new System.Drawing.Point(12, 32);
             this.gridConsPedido.Name = "gridConsPedido";

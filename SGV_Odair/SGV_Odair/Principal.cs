@@ -51,5 +51,11 @@ namespace SGV_Odair
             pedido frmPedido = new pedido();
             frmPedido.Show();
         }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            consPedido frmConsPedido = new consPedido();
+            frmConsPedido.Show();
+        }
     }
 }

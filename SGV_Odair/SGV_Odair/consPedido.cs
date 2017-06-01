@@ -57,7 +57,7 @@ namespace SGV_Odair
                 //ele pega o texto e joga na outra posição do array temp, e assim por diante
                 //até chegar no final da linha
                 string[] campos = Linha[i].Split(Convert.ToChar(";"));
-                rows.Add(campos[0], campos[1], campos[2], campos[3], campos[4], campos[5]);
+                rows.Add(campos[0], campos[1], campos[2], campos[3], campos[4]);
 
 
 
