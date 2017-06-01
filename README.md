@@ -1,17 +1,19 @@
 # Project_SGV
 Projeto: Sistema de Gestão de Venda
-	|===============================================================|
-	|			                Metrocamp DeVry                           |
-	|		             3º Sistemas de Informação                      |
-	|             	  Linguagem de Programação                      |
-	|			                Profº Ms. Odair                           |
-	|       	     Sistema de Gerenciamento de Vendas - SGV      		|
-	|								                                                |
-	|Charles Vicente - RA: 1510033897				                        |
-	|Daniel Martins  - RA: 1510034065				                        |
-	|Matheus Pereira - RA: 171150862 				                        |
-	|						                                02/06/2017          |
-	|===============================================================|
+	
+	
+						Metrocamp DeVry                           
+					3º Sistemas de Informação                      
+	   				Linguagem de Programação                      
+						Profº Ms. Odair                           
+			Sistema de Gerenciamento de Vendas - SGV      		
+	
+	
+	Charles Vicente - RA: 1510033897				                        
+	Daniel Martins  - RA: 1510034065				                       
+	Matheus Pereira - RA: 171150862 				                        
+							                      02/06/2017
+	===============================================================
 
 Para o funcionamento do software!!
 É preciso que copie/recorte (de preferencia que recorte) TODOS os arquivos "*.txt",
