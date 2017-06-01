@@ -20,6 +20,7 @@ namespace SGV_Odair
         public string qtdMovi;
 
     }
+
     public partial class pedido : Form
     {
         //caminhgo para fullpath dos arquivos *txt
@@ -121,6 +122,7 @@ namespace SGV_Odair
                 Incluir();
                 //carregarFornecedor();
                 //Atualiza();
+                carregarPedido();
                 mostrarDados();
             }
 
@@ -218,15 +220,13 @@ namespace SGV_Odair
 
                 txtCodPed.Clear();
                 txtDataPed.Clear();
-                cbxDescProdut.ResetText();
-                cbxTipMov.ResetText();
                 txtQtdMov.Clear();
 
                 txtCodPed.Focus();
             }
             catch
             {
-                MessageBox.Show("Falha ao tentar salvar dados!", "Aviso");
+                MessageBox.Show("Falha ao tentar alterar dados!", "Aviso");
             }
 
         }
@@ -236,7 +236,7 @@ namespace SGV_Odair
             btnAlterar.Enabled = (true);
             btnAnt.Enabled = (true);
             btnCancelar.Enabled = (false);
-            btnExcluir.Enabled = (false);
+            btnExcluir.Enabled = (true);
             btnNovo.Enabled = (true);
             btnGravar.Enabled = (false);
             btnPrim.Enabled = (true);
@@ -273,8 +273,13 @@ namespace SGV_Odair
 
         void carregarPedido()
         {
+
+           // contarlinhas();
+
             StreamReader graPedido = new StreamReader(caminho.fullPath + "pedido.txt", Encoding.UTF8);
             string linha = null;
+
+           // cadPed = new cadPedido[totallinha];
 
             for (int i = 0; i < totallinha; i++)
             {
@@ -330,16 +335,16 @@ namespace SGV_Odair
                 StreamReader srDescProduto = new StreamReader(caminho.fullPath + "descProduto.txt", Encoding.UTF8);
 
                 //Lê a primeira linha do arquivo
-                string linhaCat = srDescProduto.ReadLine();
+                string linhaDescProduto = srDescProduto.ReadLine();
 
                 //Continua lendo até o final do arquivo
-                while (linhaCat != null)
+                while (linhaDescProduto != null)
                 {
                     //Adiciona o linha lida no ListBox
-                    cbxDescProdut.Items.Add(linhaCat);
+                    cbxDescProdut.Items.Add(linhaDescProduto);
 
                     //Lê a próxima linha
-                    linhaCat = srDescProduto.ReadLine();
+                    linhaDescProduto = srDescProduto.ReadLine();
                 }
                 //Fecha o arquivo texto
                 srDescProduto.Close();
@@ -357,15 +362,15 @@ namespace SGV_Odair
                 StreamReader srTipoMov = new StreamReader(caminho.fullPath + "tipoMovimento.txt", Encoding.UTF8);
 
                 //Lê a primeira linha do arquivo
-                string linhaRazSoc = srTipoMov.ReadLine();
+                string linhaTipoMovi = srTipoMov.ReadLine();
 
                 //Continua lendo até o final do arquivo
-                while (linhaRazSoc != null)
+                while (linhaTipoMovi != null)
                 {
                     //Adiciona o linha lida no ListBox
-                    cbxTipMov.Items.Add(linhaRazSoc);
+                    cbxTipMov.Items.Add(linhaTipoMovi);
                     //Lê a próxima linha
-                    linhaRazSoc = srTipoMov.ReadLine();
+                    linhaTipoMovi = srTipoMov.ReadLine();
                 }
                 //Fecha o arquivo texto
                 srTipoMov.Close();

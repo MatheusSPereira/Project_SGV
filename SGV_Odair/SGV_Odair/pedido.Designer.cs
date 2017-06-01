@@ -208,6 +208,7 @@
             this.btnAlterar.TabIndex = 18;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCancelar
             // 
@@ -237,6 +238,7 @@
             this.btnAnt.TabIndex = 21;
             this.btnAnt.Text = "<";
             this.btnAnt.UseVisualStyleBackColor = true;
+            this.btnAnt.Click += new System.EventHandler(this.btnAnt_Click);
             // 
             // btnProx
             // 
@@ -246,6 +248,7 @@
             this.btnProx.TabIndex = 22;
             this.btnProx.Text = ">";
             this.btnProx.UseVisualStyleBackColor = true;
+            this.btnProx.Click += new System.EventHandler(this.btnProx_Click);
             // 
             // btnUlt
             // 
@@ -270,6 +273,7 @@
             this.Controls.Add(this.btnPrim);
             this.Name = "pedido";
             this.Text = "Movimentação Estoque";
+            this.Load += new System.EventHandler(this.pedido_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

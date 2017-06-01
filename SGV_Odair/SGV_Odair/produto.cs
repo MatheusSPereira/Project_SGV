@@ -249,7 +249,7 @@ namespace SGV_Odair
             btnAlterar.Enabled = (true);
             btnAnt.Enabled = (true);
             btnCancelar.Enabled = (false);
-            btnExcluir.Enabled = (false);
+            btnExcluir.Enabled = (true);
             btnNovo.Enabled = (true);
             btnGravar.Enabled = (false);
             btnPrim.Enabled = (true);
@@ -263,7 +263,7 @@ namespace SGV_Odair
             cbxCat.Enabled = (false);
             cbxRazSoc.Enabled = (false);
 
-            this.Text = "Registro de Fornecedor";
+            this.Text = " - Registro de Fornecedor";
         }
 
         void ModoEdicao()
