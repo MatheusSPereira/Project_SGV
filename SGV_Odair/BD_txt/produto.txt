@@ -1,5 +1,0 @@
-﻿004;AMD 1000;Placas de Video;Hotel;5;3;345
-002;Cabo VGA;Monitores;Marcenaria_AD;10;15;10
-001;AMD 544;Monitores;;5;3;150
-003;Iphone 10 Plus;Smartphones;Hotel;5;2;3500
-P004;mouse;Perifericos;Hotel;20;25;20,00
