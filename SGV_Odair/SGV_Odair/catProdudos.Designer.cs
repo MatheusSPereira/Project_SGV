@@ -28,80 +28,150 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txtCatProdut = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnUlt = new System.Windows.Forms.Button();
+            this.btnProx = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAnt = new System.Windows.Forms.Button();
+            this.btnPrim = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // txtCatProdut
             // 
-            this.button1.Location = new System.Drawing.Point(12, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Incluir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtCatProdut.Location = new System.Drawing.Point(33, 53);
+            this.txtCatProdut.Name = "txtCatProdut";
+            this.txtCatProdut.Size = new System.Drawing.Size(299, 20);
+            this.txtCatProdut.TabIndex = 5;
             // 
-            // button2
+            // label1
             // 
-            this.button2.Location = new System.Drawing.Point(93, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Nova Categoria:";
             // 
-            // button3
+            // btnNovo
             // 
-            this.button3.Location = new System.Drawing.Point(174, 226);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Alterar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnNovo.Location = new System.Drawing.Point(40, 87);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(67, 23);
+            this.btnNovo.TabIndex = 25;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnGravar
             // 
-            this.button4.Location = new System.Drawing.Point(268, 226);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(47, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "<<";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGravar.Location = new System.Drawing.Point(258, 87);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(69, 23);
+            this.btnGravar.TabIndex = 28;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnExcluir
             // 
-            this.button5.Location = new System.Drawing.Point(321, 226);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(46, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = ">>";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(113, 87);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(67, 23);
+            this.btnExcluir.TabIndex = 26;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(186, 87);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(67, 23);
+            this.btnAlterar.TabIndex = 27;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btnUlt
+            // 
+            this.btnUlt.Location = new System.Drawing.Point(265, 131);
+            this.btnUlt.Name = "btnUlt";
+            this.btnUlt.Size = new System.Drawing.Size(82, 23);
+            this.btnUlt.TabIndex = 32;
+            this.btnUlt.Text = ">>";
+            this.btnUlt.UseVisualStyleBackColor = true;
+            // 
+            // btnProx
+            // 
+            this.btnProx.Location = new System.Drawing.Point(185, 131);
+            this.btnProx.Name = "btnProx";
+            this.btnProx.Size = new System.Drawing.Size(74, 23);
+            this.btnProx.TabIndex = 31;
+            this.btnProx.Text = ">";
+            this.btnProx.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(20, 160);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(327, 23);
+            this.btnCancelar.TabIndex = 33;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnAnt
+            // 
+            this.btnAnt.Location = new System.Drawing.Point(101, 131);
+            this.btnAnt.Name = "btnAnt";
+            this.btnAnt.Size = new System.Drawing.Size(78, 23);
+            this.btnAnt.TabIndex = 30;
+            this.btnAnt.Text = "<";
+            this.btnAnt.UseVisualStyleBackColor = true;
+            // 
+            // btnPrim
+            // 
+            this.btnPrim.Location = new System.Drawing.Point(20, 131);
+            this.btnPrim.Name = "btnPrim";
+            this.btnPrim.Size = new System.Drawing.Size(75, 23);
+            this.btnPrim.TabIndex = 29;
+            this.btnPrim.Text = "<<";
+            this.btnPrim.UseVisualStyleBackColor = true;
             // 
             // catProdudos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 261);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(374, 198);
+            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnUlt);
+            this.Controls.Add(this.btnProx);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAnt);
+            this.Controls.Add(this.btnPrim);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtCatProdut);
             this.Name = "catProdudos";
             this.Text = "Categoria de Produtos";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtCatProdut;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnGravar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnUlt;
+        private System.Windows.Forms.Button btnProx;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAnt;
+        private System.Windows.Forms.Button btnPrim;
     }
 }

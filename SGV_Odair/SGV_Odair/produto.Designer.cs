@@ -34,6 +34,8 @@
             this.btnProx = new System.Windows.Forms.Button();
             this.btnUlt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtvalUnit = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxCat = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxRazSoc = new System.Windows.Forms.ComboBox();
-            this.txtvalUnit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,6 +133,22 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Produto";
+            // 
+            // txtvalUnit
+            // 
+            this.txtvalUnit.Location = new System.Drawing.Point(24, 160);
+            this.txtvalUnit.Name = "txtvalUnit";
+            this.txtvalUnit.Size = new System.Drawing.Size(121, 20);
+            this.txtvalUnit.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Valor Unitário";
             // 
             // label7
             // 
@@ -284,22 +300,6 @@
             this.cbxRazSoc.Size = new System.Drawing.Size(194, 21);
             this.cbxRazSoc.TabIndex = 5;
             // 
-            // txtvalUnit
-            // 
-            this.txtvalUnit.Location = new System.Drawing.Point(24, 160);
-            this.txtvalUnit.Name = "txtvalUnit";
-            this.txtvalUnit.Size = new System.Drawing.Size(121, 20);
-            this.txtvalUnit.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Valor Unitário";
-            // 
             // produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,7 +330,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.TextBox txtQtdEstoque;
         private System.Windows.Forms.Button btnExcluir;
@@ -347,5 +346,6 @@
         private System.Windows.Forms.ComboBox cbxCat;
         private System.Windows.Forms.TextBox txtvalUnit;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnGravar;
     }
 }

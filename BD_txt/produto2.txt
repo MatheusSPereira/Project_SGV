@@ -1,0 +1,2 @@
+﻿004;AMD 1000;Placas de Video;Hotel;25;10;345
+002;Cabo VGA;Monitores;Hotel;25;15;10

@@ -36,12 +36,18 @@ namespace SGV_Odair
         //marcar posição de um registro da struct 
 
         int modo;
-        
+        private pedido pedido;
+
         public produto()
         {
             InitializeComponent();
 
             carregaCombos();
+        }
+
+        public produto(pedido pedido)
+        {
+            this.pedido = pedido;
         }
 
         //========== INICIO ============ BOTÕES E FORM LOAD IMPLEMENTADOS ========== INICIO ============ 
@@ -202,14 +208,19 @@ namespace SGV_Odair
 
         void Atualiza()
         {
-            cadProd[p].codigo = txtCod.Text;
-            cadProd[p].descProduto = txtDescProdt.Text;
-            cadProd[p].categoria = cbxCat.Text;
-            cadProd[p].razaoSocial = cbxRazSoc.Text;
-            cadProd[p].qtdEstoque = txtQtdEstoque.Text;
-            cadProd[p].estMinimo = txtEstoMin.Text;
-            cadProd[p].valUnit = txtvalUnit.Text;
+            try { 
+                cadProd[p].codigo = txtCod.Text;
+                cadProd[p].descProduto = txtDescProdt.Text;
+                cadProd[p].categoria = cbxCat.Text;
+                cadProd[p].razaoSocial = cbxRazSoc.Text;
+                cadProd[p].qtdEstoque = txtQtdEstoque.Text;
+                cadProd[p].estMinimo = txtEstoMin.Text;
+                cadProd[p].valUnit = txtvalUnit.Text;
+            }
+            catch
+            {
 
+            }
 
         }
 
@@ -263,7 +274,7 @@ namespace SGV_Odair
             cbxCat.Enabled = (false);
             cbxRazSoc.Enabled = (false);
 
-            this.Text = " - Registro de Fornecedor";
+            this.Text = this.Text + " - Registro do Produto";
         }
 
         void ModoEdicao()
@@ -285,7 +296,7 @@ namespace SGV_Odair
             cbxCat.Enabled = (true);
             cbxRazSoc.Enabled = (true);
 
-            this.Text = this.Text + " - ALTERAÇÃO DO FORNECEDOR";
+            this.Text = this.Text + " - Alteração do Produto";
         }
 
         void carregarProduto()
@@ -313,15 +324,19 @@ namespace SGV_Odair
 
         void mostrarDados()
         {
-
-            txtCod.Text = Convert.ToString(cadProd[p].codigo);
-            txtDescProdt.Text = Convert.ToString(cadProd[p].descProduto);
-            cbxCat.Text = Convert.ToString(cadProd[p].categoria);
-            cbxRazSoc.Text = Convert.ToString(cadProd[p].razaoSocial);
-            txtQtdEstoque.Text = Convert.ToString(cadProd[p].qtdEstoque);
-            txtEstoMin.Text = Convert.ToString(cadProd[p].estMinimo);
-            txtvalUnit.Text = Convert.ToString(cadProd[p].valUnit);
-
+            try { 
+                txtCod.Text = Convert.ToString(cadProd[p].codigo);
+                txtDescProdt.Text = Convert.ToString(cadProd[p].descProduto);
+                cbxCat.Text = Convert.ToString(cadProd[p].categoria);
+                cbxRazSoc.Text = Convert.ToString(cadProd[p].razaoSocial);
+                txtQtdEstoque.Text = Convert.ToString(cadProd[p].qtdEstoque);
+                txtEstoMin.Text = Convert.ToString(cadProd[p].estMinimo);
+                txtvalUnit.Text = Convert.ToString(cadProd[p].valUnit);
+            }
+            catch
+            {
+                MessageBox.Show("Nenhum Produto Cadastrado");
+            }
         }
 
         void contarlinhas()

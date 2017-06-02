@@ -8,9 +8,22 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SGV_Odair;
 
 namespace SGV_Odair
 {
+    public struct validaEntSai
+    {
+        public string codigo;
+        public string descProduto;
+        public string categoria;
+        public string razaoSocial;
+        public string qtdEstoque;
+        public string estMinimo;
+        public string valUnit;
+
+    }
+
     public struct cadPedido
     {
         public string codigo;
@@ -26,9 +39,12 @@ namespace SGV_Odair
         //caminhgo para fullpath dos arquivos *txt
         configuracao caminho = new configuracao();
 
+
         int totallinha = 0;//variavel global
+        int totLinhaProduto = 0;
         //numero total de linhas no arquivo texto
         //vetro da minha struct 
+        validaEntSai[] valida;
         cadPedido[] cadPed; //vetor global da minha estrutura Cadastro
         int p;
         //marcar posição de um registro da struct 
@@ -52,7 +68,9 @@ namespace SGV_Odair
             contarlinhas();
             //defini o tamanho do vetor atraves da função acima 
             cadPed = new cadPedido[totallinha];
+            valida = new validaEntSai[totLinhaProduto];
             //carregar o vetor Cadastro
+           // carregarProduto();
             carregarPedido();
             mostrarDados();
             Atualiza();
@@ -165,14 +183,105 @@ namespace SGV_Odair
         }
         //========== FIM ============ BOTÕES E FORM LOAD IMPLEMENTADOS ========== FIM ============
 
+
         void Incluir()
         {
+            int qtdEstoquenew = 0;
+       
+
+            StreamReader validaProd = new StreamReader(caminho.fullPath + "produto.txt", Encoding.UTF8);
+            string linhaProduto = null;
+
+            for (int i = 0; i < totLinhaProduto; i++)
+            {
+                if ((linhaProduto = validaProd.ReadLine()) != null)
+                {
+                    string[] vetaux = linhaProduto.Split(';');
+                    valida[i].codigo = vetaux[0];
+                    valida[i].descProduto = vetaux[1];
+                    valida[i].categoria = vetaux[2];
+                    valida[i].razaoSocial = vetaux[3];
+                    valida[i].qtdEstoque = vetaux[4];
+                    valida[i].estMinimo = vetaux[5];
+                    valida[i].valUnit = vetaux[6];
+
+                    qtdEstoquenew = int.Parse(valida[i].qtdEstoque = vetaux[4]);
+
+                    //===================== IF DO "E" =====================
+                    if (cbxTipMov.Text == "E")
+                    {
+
+                        if (Convert.ToString(valida[i].descProduto = vetaux[1]) == Convert.ToString(cbxDescProdut.Text))
+                        {
+                            qtdEstoquenew = int.Parse(valida[i].qtdEstoque) + int.Parse(txtQtdMov.Text);
+
+                            //qtdEstoque = result;
+                            validaProd.Close();
+
+                            MessageBox.Show("E2" + "\n" + qtdEstoquenew);
+                           // validaProd.Close();
+                        }
+                        MessageBox.Show("E");
+
+                        StreamWriter graProd = new StreamWriter(caminho.fullPath + "produto2.txt", false, Encoding.UTF8);
+
+                        for (int b = 0; b < totLinhaProduto; b++)
+                        {
+                            graProd.WriteLine(valida[b].codigo + ";" + valida[b].descProduto + ";" + valida[b].categoria + ";" + valida[b].razaoSocial + ";" + qtdEstoquenew + ";" + valida[b].estMinimo + ";" + valida[b].valUnit);
+                        }
+
+                        graProd.Close();
+
+                    }//fim do if == "E"
+
+
+
+                    //===================== IF DO "S" =====================
+                    if (cbxTipMov.Text == "S")
+                    {
+
+                        if (Convert.ToString(valida[i].descProduto = vetaux[1]) == Convert.ToString(cbxDescProdut.Text))
+                        {
+                            qtdEstoquenew =  int.Parse(valida[i].qtdEstoque) - int.Parse(txtQtdMov.Text);
+
+
+                            validaProd.Close();
+
+                            MessageBox.Show("S2" + "\n" + qtdEstoquenew);
+                           
+                        }
+                        MessageBox.Show("S");
+
+                        StreamWriter graProd = new StreamWriter(caminho.fullPath + "produto2.txt", false, Encoding.UTF8);
+
+                        for (int i2 = 0; i2 < totLinhaProduto; i2++)
+                            //{
+                            graProd.WriteLine(valida[i2].codigo + ";" + valida[i2].descProduto + ";" + valida[i2].categoria + ";" + valida[i2].razaoSocial + ";" + qtdEstoquenew + ";" + valida[i2].estMinimo + ";" + valida[i2].valUnit);
+                        //}
+
+                        graProd.Close();
+
+                    }//fim do if == "E"
+                }
+            }
+            //validaProd.Close();
+            p = 0;
+
             StreamWriter graPedi = new StreamWriter(caminho.fullPath + "pedido.txt", true, Encoding.UTF8);
             graPedi.WriteLine(txtCodPed.Text + ";" + txtDataPed.Text + ";" + cbxDescProdut.Text + ";" + cbxTipMov.Text + ";" + txtQtdMov.Text);
-
             graPedi.Close();
 
+            
+            if (cbxTipMov.Text == "S")
+            {
+
+
+                MessageBox.Show("S");
+
+            }
+
             MessageBox.Show("Salvo com Sucesso!", "Aviso");
+
         }
 
         void excluir()
@@ -312,18 +421,23 @@ namespace SGV_Odair
         {
             //abrir arquivos
             StreamReader graPedido = new StreamReader(caminho.fullPath + "pedido.txt", Encoding.UTF8);
+            StreamReader graProdut = new StreamReader(caminho.fullPath + "produto.txt", Encoding.UTF8);
             //le a 1 linha 
             string linha = graPedido.ReadLine();
+            string linhaProduto = graProdut.ReadLine();
             //ler ate o final do arquivo 
-            while (linha != null)
+            while (linha != null && linhaProduto != null)
             {
                 //conta um registro
                 totallinha++;
+                totLinhaProduto++;
                 //ler proxima linha
                 linha = graPedido.ReadLine();
+                linhaProduto = graProdut.ReadLine();
             }
             //fechar arquivo 
             graPedido.Close();
+            graProdut.Close();
         }
 
         void carregaCombos()
@@ -384,6 +498,35 @@ namespace SGV_Odair
         }
 
 
+        void carregarProduto()
+        {
+
+            StreamReader validaProd = new StreamReader(caminho.fullPath + "produto.txt", Encoding.UTF8);
+            string linhaProduto = null;
+
+            for (int i = 0; i < totLinhaProduto; i++)
+            {
+                if ((linhaProduto = validaProd.ReadLine()) != null)
+                {
+                    string[] vetaux = linhaProduto.Split(';');
+                    valida[i].codigo = vetaux[0];
+                    valida[i].descProduto = vetaux[1];
+                    valida[i].categoria = vetaux[2];
+                    valida[i].razaoSocial = vetaux[3];
+                    valida[i].qtdEstoque = vetaux[4];
+                    valida[i].estMinimo = vetaux[5];
+                    valida[i].valUnit = vetaux[6];
+                }
+            }
+            validaProd.Close();
+            p = 0;
+
+            MessageBox.Show("Produtos Carregado com Sucesso!", "Aviso");
+
+        }
+
+        
+        
     }
 }
 

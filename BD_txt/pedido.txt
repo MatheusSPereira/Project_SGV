@@ -1,12 +1,13 @@
 ﻿PE001;21/09/2017;AMD 544;S;12
-PE009;12/21/3333;Iphone 10 Plus;E;123
-P434;dsa;Cabo VGA;S;21
-fndkjs;12/21/2121;Cabo VGA;S;5678
-mn;12/21/2017;AMD 1000;E;4
-ma;7;AMD 1000;E;8
-rr;4;AMD 1000;E;6
-909;12/09/1222;AMD 1000;E;8
-;;;;
-;;;;
-;;;;
-;;;;
+321;2;Cabo VGA;E;3
+321;3432;Cabo VGA;E;5
+ds;3;Cabo VGA;E;3
+wq;321;AMD 1000;E;2
+ew;q;Cabo VGA;E;3
+21;21;Cabo VGA;E;4
+32;432;Cabo VGA;E;3
+43;555;Cabo VGA;E;3
+www;2;Cabo VGA;E;6
+32;232;AMD 1000;E;22
+321;321;Cabo VGA;S;4
+dsa;32;Cabo VGA;E;2
