@@ -31,3 +31,4 @@ C:\Users\Matheus Pereira\Desktop\SGV_Odair\Project_SGV\SGV_Odair\SGV_Odair\obj\D
 C:\Users\Matheus Pereira\Desktop\SGV_Odair\Project_SGV\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.produto.resources
 C:\Users\Matheus Pereira\Desktop\SGV_Odair\Project_SGV\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.Properties.Resources.resources
 C:\Users\Matheus Pereira\Desktop\SGV_Odair\Project_SGV\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.csproj.GenerateResource.Cache
+C:\Users\Matheus Pereira\Desktop\SGV_Odair\Project_SGV\SGV_Odair\SGV_Odair\obj\Debug\SGV_Odair.consCategoria.resources

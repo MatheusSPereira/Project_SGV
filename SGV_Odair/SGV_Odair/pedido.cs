@@ -178,8 +178,8 @@ namespace SGV_Odair
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            consPedido frmConsPedido = new consPedido();
-            frmConsPedido.Show();
+            consCategoria frmConsCategoria = new consCategoria();
+            frmConsCategoria.Show();
         }
         //========== FIM ============ BOTÕES E FORM LOAD IMPLEMENTADOS ========== FIM ============
 
@@ -218,10 +218,10 @@ namespace SGV_Odair
                             //qtdEstoque = result;
                             validaProd.Close();
 
-                            MessageBox.Show("E2" + "\n" + qtdEstoquenew);
+                            //MessageBox.Show("E2" + "\n" + qtdEstoquenew);
                            // validaProd.Close();
                         }
-                        MessageBox.Show("E");
+                        //MessageBox.Show("E");
 
                         StreamWriter graProd = new StreamWriter(caminho.fullPath + "produto2.txt", false, Encoding.UTF8);
 
@@ -247,10 +247,10 @@ namespace SGV_Odair
 
                             validaProd.Close();
 
-                            MessageBox.Show("S2" + "\n" + qtdEstoquenew);
+                            //MessageBox.Show("S2" + "\n" + qtdEstoquenew);
                            
                         }
-                        MessageBox.Show("S");
+                       // MessageBox.Show("S");
 
                         StreamWriter graProd = new StreamWriter(caminho.fullPath + "produto2.txt", false, Encoding.UTF8);
 
@@ -261,24 +261,16 @@ namespace SGV_Odair
 
                         graProd.Close();
 
-                    }//fim do if == "E"
+                    }//fim do if == "S"
                 }
             }
-            //validaProd.Close();
+            validaProd.Close();
             p = 0;
 
             StreamWriter graPedi = new StreamWriter(caminho.fullPath + "pedido.txt", true, Encoding.UTF8);
             graPedi.WriteLine(txtCodPed.Text + ";" + txtDataPed.Text + ";" + cbxDescProdut.Text + ";" + cbxTipMov.Text + ";" + txtQtdMov.Text);
             graPedi.Close();
 
-            
-            if (cbxTipMov.Text == "S")
-            {
-
-
-                MessageBox.Show("S");
-
-            }
 
             MessageBox.Show("Salvo com Sucesso!", "Aviso");
 

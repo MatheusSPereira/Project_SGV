@@ -57,5 +57,17 @@ namespace SGV_Odair
             consPedido frmConsPedido = new consPedido();
             frmConsPedido.Show();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            catProdudos frmcadCatProd = new catProdudos();
+            frmcadCatProd.Show();
+        }
+
+        private void categoriasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            consCategoria frmConsCatProd = new consCategoria();
+            frmConsCatProd.Show();
+        }
     }
 }
